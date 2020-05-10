@@ -49,7 +49,10 @@ body {
 
 /* 메인 비디오 */
 .video {
-  width: 100vw;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* videotitle 해쉬태그,동영상 제목, 조회수 */
@@ -60,20 +63,19 @@ body {
   padding-left: 10px;
 }
 
-.info {
-  border-top: 1px solid rgb(176, 177, 180);
-}
-
 .info__icon {
-  position: relative;
-  left: 90%;
-  bottom: 50px;
-  padding: 5px;
-  font-size: 20px;
+  border: none;
+  background-color: var(--white-color);
+  position: absolute;
+  right: 15px;
 }
 
 .info__icon:hover {
   cursor: pointer;
+}
+
+.info {
+  border-top: 1px solid rgb(176, 177, 180);
 }
 
 .info .videotitle .hashtag {
@@ -100,6 +102,10 @@ body {
   color: var(--gray-color);
 }
 
+.icons i:hover {
+  cursor: pointer;
+}
+
 .icons button {
   display: flex;
   flex-direction: column;
@@ -112,4 +118,87 @@ body {
 .icons button span {
   font-size: 15px;
   color: var(--gray-color);
+}
+
+/* 사용자 프로필사진, 닉네임, 구독자수 */
+
+.subscribe {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid rgb(176, 177, 180);
+}
+
+.userimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+}
+
+.user {
+  padding-left: 10px;
+}
+
+.user__icon {
+  border: none;
+  background-color: var(--white-color);
+  position: absolute;
+  right: 15px;
+}
+
+.fa-youtube {
+  color: red;
+  position: relative;
+  bottom: 10px;
+}
+
+.fa-youtube:hover {
+  cursor: pointer;
+}
+
+.subscriber {
+  color: var(--gray-color);
+  font-size: 15px;
+}
+
+/* 댓글 */
+.comment {
+  border-bottom: 1px solid rgb(176, 177, 180);
+  padding: 10px;
+}
+
+.comment_icon {
+  border: none;
+  background-color: var(--white-color);
+  position: absolute;
+  right: 15px;
+}
+
+.comment_icon:hover {
+  cursor: pointer;
+}
+
+/* 다음동영상 */
+.nextvideo__text {
+  padding: 10px;
+  font-size: 15px;
+}
+
+.nextvideo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.video_1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.video_info video {
+  padding: 30px;
+}
+
+.video_1 .video_info {
+  font-size: 12px;
 }

@@ -41,9 +41,13 @@
         <!-- 현재 재생에 관한 해쉬태그,제목,조회수 -->
         <div class="videotitle">
           <div class="hashtag">#클론 #CSS #HTML #javascript</div>
-          <div class="videotitle__main">모닥불 소리</div>
+          <div class="videotitle__main">
+            모닥불 소리
+            <button class="info__icon">
+              <i class="fas fa-angle-down"></i>
+            </button>
+          </div>
           <div class="viewer">조회수 956회</div>
-          <i class="fas fa-angle-down info__icon"></i>
         </div>
         <!-- 좋아요 싫어요 아이콘들 -->
         <div class="icons">
@@ -55,24 +59,32 @@
         </div>
         <!-- 사용자 프로필사진, 닉네임, 구독자수 -->
         <div class="subscribe">
-          <img class="userimg" src="/프로필.jpg" height="20px" />
+          <img class="userimg" src="/프로필.jpg" />
           <div class="user">
             <div class="username">Junocode</div>
-            <div class="subscriber">1111명</div>
-            <i class="fab fa-youtube user"></i>
+            <div class="subscriber">
+              구독자 1111명
+              <button class="user__icon">
+                <i class="fab fa-youtube">구독</i>
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- 댓글 -->
       <section class="comment">
-        <div class="comment__line">댓글 312개</div>
-        <i class="fas fa-angle-down comment_icon"></i>
+        <div class="comment__line">
+          댓글 312개
+          <button class="comment_icon">
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
       </section>
 
       <!-- 다음 재생 비디오 -->
+      <div class="nextvideo__text">다음 동영상</div>
       <nav class="nextvideo">
-        <div class="nextvideo__info">다음 동영상</div>
         <div class="video_1">
           <video src="/video/Mountain - 34608.mp4" width="150px"></video>
           <span class="video_info">고요한 산</span>
