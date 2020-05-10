@@ -25,12 +25,14 @@ body {
   display: flex;
   font-size: 25px;
   background-color: var(--black-color);
-  padding: 10px 5px;
+  padding: 20px 10px;
 }
 
 .header_icon {
   color: var(--red-color);
   flex-grow: 80;
+  position: relative;
+  top: 1px;
 }
 
 .header_icon span {
@@ -59,8 +61,8 @@ body {
 .videotitle {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  padding-left: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .info__icon {
@@ -68,6 +70,8 @@ body {
   background-color: var(--white-color);
   position: absolute;
   right: 15px;
+  font-size: 20px;
+  transition: 0.5s;
 }
 
 .info__icon:hover {
@@ -84,6 +88,20 @@ body {
 
 .info .videotitle .videotitle__main {
   font-size: 20px;
+  width: 600px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info .videotitle .activeIcon {
+  display: inline-block;
+}
+
+.info .videotitle .rotationIcon {
+  transform: rotate(180deg);
+  transition: 0.5s;
 }
 
 .info .videotitle .viewer {
@@ -95,7 +113,7 @@ body {
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid rgb(176, 177, 180);
-  padding-bottom: 5px;
+  padding: 30px;
 }
 
 .icons i {
@@ -151,6 +169,7 @@ body {
   color: red;
   position: relative;
   bottom: 10px;
+  font-size: 20px;
 }
 
 .fa-youtube:hover {
@@ -173,6 +192,7 @@ body {
   background-color: var(--white-color);
   position: absolute;
   right: 15px;
+  font-size: 20px;
 }
 
 .comment_icon:hover {
@@ -181,8 +201,8 @@ body {
 
 /* 다음동영상 */
 .nextvideo__text {
-  padding: 10px;
-  font-size: 15px;
+  padding: 25px;
+  font-size: 20px;
 }
 
 .nextvideo {
@@ -195,10 +215,11 @@ body {
   flex-direction: column;
 }
 
-.video_info video {
-  padding: 30px;
+.video_1 video {
+  flex-grow: 1;
+  width: 250px;
 }
 
 .video_1 .video_info {
-  font-size: 12px;
+  font-size: 18px;
 }
