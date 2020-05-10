@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Youtube clone</title>
+    <link rel="stylesheet" href="youtubeclone.css" />
+
+    <!-- icon Awesome -->
+    <script
+      src="https://kit.fontawesome.com/e985e27e43.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 구글폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="cloneyoutube">
+      <!-- 상단바 -->
+      <header class="header">
+        <i class="fab fa-youtube header_icon"><span>Youtube</span></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </header>
+
+      <!-- 메인 비디오 -->
+      <main>
+        <video
+          controls
+          src="/video/Background - 33633.mp4"
+          type="video/mp4"
+          class="video"
+        ></video>
+      </main>
+
+      <!-- 사용자에 관한 정보 제목, 아이콘, 구독자 등등 -->
+      <section class="info">
+        <!-- 현재 재생에 관한 해쉬태그,제목,조회수 -->
+        <div class="videotitle">
+          <div class="hashtag">#클론 #CSS #HTML #javascript</div>
+          <div class="videotitle__main">모닥불 소리</div>
+          <div class="viewer">조회수 956회</div>
+          <i class="fas fa-angle-down info__icon"></i>
+        </div>
+        <!-- 좋아요 싫어요 아이콘들 -->
+        <div class="icons">
+          <button><i class="fas fa-thumbs-up"></i><span>좋아요</span></button>
+          <button><i class="fas fa-thumbs-down"></i><span>싫어요</span></button>
+          <button><i class="fas fa-share"></i><span>공유</span></button>
+          <button><i class="far fa-plus-square"></i><span>저장</span></button>
+          <button><i class="fas fa-flag"></i><span>신고</span></button>
+        </div>
+        <!-- 사용자 프로필사진, 닉네임, 구독자수 -->
+        <div class="subscribe">
+          <img class="userimg" src="/프로필.jpg" height="20px" />
+          <div class="user">
+            <div class="username">Junocode</div>
+            <div class="subscriber">1111명</div>
+            <i class="fab fa-youtube user"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- 댓글 -->
+      <section class="comment">
+        <div class="comment__line">댓글 312개</div>
+        <i class="fas fa-angle-down comment_icon"></i>
+      </section>
+
+      <!-- 다음 재생 비디오 -->
+      <nav class="nextvideo">
+        <div class="nextvideo__info">다음 동영상</div>
+        <div class="video_1">
+          <video src="/video/Mountain - 34608.mp4" width="150px"></video>
+          <span class="video_info">고요한 산</span>
+        </div>
+        <div class="video_1">
+          <video src="/video/Sea - 33194.mp4" width="150px"></video>
+          <span class="video_info">깨끗한 바다</span>
+        </div>
+        <div class="video_1">
+          <video src="video/Sunrise - 35254.mp4" width="150px"></video>
+          <span class="video_info">눈부신 햇살</span>
+        </div>
+      </nav>
+    </div>
+    <script src="youtubeclone.js"></script>
+  </body>
+</html>

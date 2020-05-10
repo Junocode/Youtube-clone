@@ -1,0 +1,115 @@
+:root {
+  --red-color: rgb(255, 0, 0);
+  --black-color: rgb(34, 34, 34);
+  --white-color: rgb(255, 255, 255);
+  --gray-color: rgb(176, 177, 180);
+  --blue-color: rgb(119, 167, 229);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.cloneyoutube {
+  width: 100vw;
+}
+
+/* 상단바 */
+.header {
+  display: flex;
+  font-size: 25px;
+  background-color: var(--black-color);
+  padding: 10px 5px;
+}
+
+.header_icon {
+  color: var(--red-color);
+  flex-grow: 80;
+}
+
+.header_icon span {
+  color: var(--white-color);
+}
+
+.fa-search {
+  flex-grow: 5;
+  color: var(--gray-color);
+}
+
+.fa-ellipsis-v {
+  flex-grow: 3;
+  color: var(--gray-color);
+}
+
+/* 메인 비디오 */
+.video {
+  width: 100vw;
+}
+
+/* videotitle 해쉬태그,동영상 제목, 조회수 */
+.videotitle {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.info {
+  border-top: 1px solid rgb(176, 177, 180);
+}
+
+.info__icon {
+  position: relative;
+  left: 90%;
+  bottom: 50px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.info__icon:hover {
+  cursor: pointer;
+}
+
+.info .videotitle .hashtag {
+  color: var(--blue-color);
+}
+
+.info .videotitle .videotitle__main {
+  font-size: 20px;
+}
+
+.info .videotitle .viewer {
+  color: var(--gray-color);
+}
+
+/* 좋아요 싫어요 등 아이콘 관련 */
+.icons {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(176, 177, 180);
+  padding-bottom: 5px;
+}
+
+.icons i {
+  color: var(--gray-color);
+}
+
+.icons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  border: none;
+  background-color: var(--white-color);
+}
+
+.icons button span {
+  font-size: 15px;
+  color: var(--gray-color);
+}
