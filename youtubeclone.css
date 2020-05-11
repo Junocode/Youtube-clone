@@ -11,13 +11,21 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
+button,
+button:focus {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
 body {
   padding: 0px;
   margin: 0px;
 }
 
 .cloneyoutube {
-  width: 100vw;
+  width: 100%;
 }
 
 /* 상단바 */
@@ -25,7 +33,7 @@ body {
   display: flex;
   font-size: 25px;
   background-color: var(--black-color);
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 
 .header_icon {
@@ -40,7 +48,7 @@ body {
 }
 
 .fa-search {
-  flex-grow: 5;
+  flex-grow: 3;
   color: var(--gray-color);
 }
 
@@ -50,11 +58,18 @@ body {
 }
 
 /* 메인 비디오 */
+main {
+  text-align: center;
+  background-color: var(--black-color);
+  position: sticky;
+  top: 0;
+}
+
 .video {
   width: 100%;
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 600px;
 }
 
 /* videotitle 해쉬태그,동영상 제목, 조회수 */
@@ -65,13 +80,21 @@ body {
   padding-left: 20px;
 }
 
-.info__icon {
-  border: none;
-  background-color: var(--white-color);
-  position: absolute;
-  right: 15px;
+.info .videotitle .videoTitleAndButton {
+  display: flex;
+}
+
+.info .videotitle .videotitle__main {
   font-size: 20px;
-  transition: 0.5s;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.info__icon {
+  font-size: 20px;
+  height: 100%;
 }
 
 .info__icon:hover {
@@ -86,22 +109,12 @@ body {
   color: var(--blue-color);
 }
 
-.info .videotitle .videotitle__main {
-  font-size: 20px;
-  width: 600px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
-
 .info .videotitle .activeIcon {
   display: inline-block;
 }
 
 .info .videotitle .rotationIcon {
   transform: rotate(180deg);
-  transition: 0.5s;
 }
 
 .info .videotitle .viewer {
@@ -142,84 +155,150 @@ body {
 
 .subscribe {
   display: flex;
-  padding: 10px;
-  border-bottom: 1px solid rgb(176, 177, 180);
+  justify-content: space-between;
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--gray-color);
 }
 
-.userimg {
+.subscribe .user .userinfo .subscriber {
+  color: var(--gray-color);
+  font-size: 12px;
+}
+
+.subscribe .user {
+  display: flex;
+}
+
+.subscribe .user .userimg {
+  padding-right: 10px;
+}
+
+.subscribe .user__icon {
+  padding-top: 10px;
+}
+
+.subscribe .user .userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe .user .userimg {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.subscribe .user .userimg img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  position: relative;
-  top: 5px;
 }
 
-.user {
-  padding-left: 10px;
-}
-
-.user__icon {
-  border: none;
-  background-color: var(--white-color);
-  position: absolute;
-  right: 15px;
-}
-
-.fa-youtube {
-  color: red;
-  position: relative;
-  bottom: 10px;
-  font-size: 20px;
-}
-
-.fa-youtube:hover {
-  cursor: pointer;
-}
-
-.subscriber {
-  color: var(--gray-color);
+.subscribe .user__icon button i {
+  color: var(--red-color);
   font-size: 15px;
 }
-
 /* 댓글 */
 .comment {
   border-bottom: 1px solid rgb(176, 177, 180);
-  padding: 10px;
+  padding-left: 20px;
+}
+
+.comment .commentAndBtn {
+  display: flex;
+  justify-content: space-between;
 }
 
 .comment_icon {
-  border: none;
-  background-color: var(--white-color);
-  position: absolute;
-  right: 15px;
   font-size: 20px;
-}
-
-.comment_icon:hover {
-  cursor: pointer;
+  height: 100%;
 }
 
 /* 다음동영상 */
 .nextvideo__text {
-  padding: 25px;
-  font-size: 20px;
+  padding: 5px;
+  font-size: 15px;
 }
 
 .nextvideo {
   display: flex;
+  flex-direction: column;
+}
+
+.video__item {
+  display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }
 
 .video_1 {
   display: flex;
-  flex-direction: column;
+}
+
+.video_1 .nextcontent {
+  flex-grow: 35;
+  padding-left: 5px;
 }
 
 .video_1 video {
   flex-grow: 1;
-  width: 250px;
+  width: 30vw;
+  max-width: 150px;
 }
 
 .video_1 .video_info {
-  font-size: 18px;
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  flex-grow: 65;
+  padding-left: 5px;
+}
+
+@media screen and (min-width: 769px) {
+  main {
+    position: relative;
+  }
+
+  .media768px {
+    display: flex;
+  }
+
+  /* 하단부 */
+  .info {
+    width: 60%;
+  }
+
+  .nextvideo {
+    width: 40%;
+    flex-shrink: 0;
+    border-left: 1px solid var(--gray-color);
+  }
+
+  /* 재생목록  */
+  .nextvideo .nextvideo__text {
+    text-align: center;
+  }
+
+  .nextvideo .video__item .video_1 {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+  }
+
+  .nextvideo .video__item .video_1 .video_info {
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    height: 80px;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    flex-grow: 65;
+  }
+
+  .nextvideo .video__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

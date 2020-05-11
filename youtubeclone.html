@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Youtube clone</title>
     <link rel="stylesheet" href="youtubeclone.css" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- icon Awesome -->
     <script
       src="https://kit.fontawesome.com/e985e27e43.js"
@@ -36,72 +36,101 @@
         ></video>
       </main>
 
-      <!-- 사용자에 관한 정보 제목, 아이콘, 구독자 등등 -->
-      <section class="info">
-        <!-- 현재 재생에 관한 해쉬태그,제목,조회수 -->
-        <div class="videotitle">
-          <div class="hashtag">#클론 #CSS #HTML #javascript</div>
-          <div class="videotitle__main">
-            모닥불 소리 Lorem, ipsum dolor sit amet consectetur adipisicing
-            elit. Tempore, eum. Asperiores delectus, perferendis sint, numquam
-            vel impedit aut dignissimos consequatur ullam reiciendis tempore at.
-            Soluta placeat molestias aspernatur delectus saepe!
-          </div>
-          <button class="info__icon">
-            <i class="fas fa-angle-down"></i>
-          </button>
-          <div class="viewer">조회수 956회</div>
-        </div>
-        <!-- 좋아요 싫어요 아이콘들 -->
-        <div class="icons">
-          <button><i class="fas fa-thumbs-up"></i><span>좋아요</span></button>
-          <button><i class="fas fa-thumbs-down"></i><span>싫어요</span></button>
-          <button><i class="fas fa-share"></i><span>공유</span></button>
-          <button><i class="far fa-plus-square"></i><span>저장</span></button>
-          <button><i class="fas fa-flag"></i><span>신고</span></button>
-        </div>
-        <!-- 사용자 프로필사진, 닉네임, 구독자수 -->
-        <div class="subscribe">
-          <img class="userimg" src="/프로필.jpg" />
-          <div class="user">
-            <div class="username">Junocode</div>
-            <div class="subscriber">
-              구독자 1111명
-              <button class="user__icon">
-                <i class="fab fa-youtube">구독</i>
+      <!-- 하단부 -->
+      <div class="media768px">
+        <!-- 사용자에 관한 정보 제목, 아이콘, 구독자, 댓글 -->
+        <section class="info">
+          <!-- 현재 재생에 관한 해쉬태그,제목,조회수 -->
+          <div class="videotitle">
+            <div class="hashtag">#클론 #CSS #HTML #javascript</div>
+            <div class="videoTitleAndButton">
+              <div class="videotitle__main">
+                모닥불 소리 Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Tempore, eum. Asperiores delectus, perferendis sint,
+                numquam vel impedit aut dignissimos consequatur ullam reiciendis
+                tempore at. Soluta placeat molestias aspernatur delectus saepe!
+              </div>
+              <button class="info__icon">
+                <i class="fas fa-angle-down"></i>
               </button>
             </div>
+
+            <div class="viewer">조회수 956회</div>
           </div>
-        </div>
-      </section>
+          <!-- 좋아요 싫어요 아이콘들 -->
+          <div class="icons">
+            <button><i class="fas fa-thumbs-up"></i><span>좋아요</span></button>
+            <button>
+              <i class="fas fa-thumbs-down"></i><span>싫어요</span>
+            </button>
+            <button><i class="fas fa-share"></i><span>공유</span></button>
+            <button><i class="far fa-plus-square"></i><span>저장</span></button>
+            <button><i class="fas fa-flag"></i><span>신고</span></button>
+          </div>
+          <!-- 사용자 프로필사진, 닉네임, 구독자수 -->
+          <div class="subscribe">
+            <div class="user">
+              <div class="userimg"><img src="/프로필.jpg" /></div>
+              <div class="userinfo">
+                <span class="username">Junocode</span>
+                <span class="subscriber">구독자 1111명</span>
+              </div>
+            </div>
+            <!-- 구독버튼 -->
+            <div class="user__icon">
+              <button><i class="fab fa-youtube">구독</i></button>
+            </div>
+          </div>
 
-      <!-- 댓글 -->
-      <section class="comment">
-        <div class="comment__line">
-          댓글 312개
-          <button class="comment_icon">
-            <i class="fas fa-angle-down"></i>
-          </button>
-        </div>
-      </section>
+          <!-- 댓글 -->
+          <section class="comment">
+            <div class="commentAndBtn">
+              <div class="comment__line">
+                댓글 312개
+              </div>
+              <button class="comment_icon">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </div>
+          </section>
+        </section>
 
-      <!-- 다음 재생 비디오 -->
+        <!-- 다음 재생 비디오 -->
 
-      <div class="nextvideo__text">다음 동영상</div>
-      <nav class="nextvideo">
-        <div class="video_1">
-          <video src="/video/Mountain - 34608.mp4"></video>
-          <span class="video_info">고요한 산</span>
-        </div>
-        <div class="video_1">
-          <video src="/video/Sea - 33194.mp4"></video>
-          <span class="video_info">깨끗한 바다</span>
-        </div>
-        <div class="video_1">
-          <video src="video/Sunrise - 35254.mp4"></video>
-          <span class="video_info">눈부신 햇살</span>
-        </div>
-      </nav>
+        <nav class="nextvideo">
+          <div class="nextvideo__text">다음 동영상</div>
+          <div class="video__item">
+            <div class="video_1">
+              <div class="nextcontent">
+                <video src="/video/Mountain - 34608.mp4"></video>
+              </div>
+              <span class="video_info"
+                >고요한 산 Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Aliquam,lore ipsa.</span
+              >
+            </div>
+            <div class="video_1">
+              <div class="nextcontent">
+                <video src="/video/Sea - 33194.mp4"></video>
+              </div>
+              <span class="video_info"
+                >깨끗한 바다 Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Quis, cum.</span
+              >
+            </div>
+            <div class="video_1">
+              <div class="nextcontent">
+                <video src="video/Sunrise - 35254.mp4"></video>
+              </div>
+              <span class="video_info"
+                >눈부신 햇살 Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, ab?Ratione, voluptates!</span
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
     <script src="youtubeclone.js"></script>
   </body>
